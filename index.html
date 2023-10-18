@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemple de CSS avec Fichier Externe</title>
+    <link rel="stylesheet" href="cssiop.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="texte-haut-gauche">YOUR_SEARCH</div>
+    <div class="fond bandeau_superieur"></div>
+    <div class="fond plus"></div>
+    <div class="fond loupe"></div>
+    <div class="fiches-container">
+        <div class="fiche"></div>
+        <div class="fiche"></div>
+        <div class="fiche"></div>
+        <div class="fiche"></div>
+    </div>
+    <div class="barre_recherche">
+        <input type="text" placeholder="Rechercher une fiche">
+        <div class="loupe"></div>
+    </div>
+
+    <!-- Pop-up de connexion -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Connectez-vous</h2>
+            <form>
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password">
+                <div class="g-signin2" data-onsuccess="onSignIn" data-client_id="498178252529-pq5m4hs29ttb9mqfgs5ibhto1j4ptuio.apps.googleusercontent.com">Se connecter avec Google</div>
+            </form>
+            <span class="close" id="close-popup">Fermer</span>
+        </div>
+    </div>
+
+    <script>
+        gapi.load('auth2', function() {
+            gapi.auth2.init({
+                client_id: '498178252529-pq5m4hs29ttb9mqfgs5ibhto1j4ptuio.apps.googleusercontent.com',
+            });
+        });
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Nom: ' + profile.getName());
+            console.log('Email: ' + profile.getEmail());
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

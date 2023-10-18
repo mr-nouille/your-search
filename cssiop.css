@@ -1,0 +1,185 @@
+/* Styles pour le bouton "Se connecter avec Google" */
+.g-signin2 {
+    background-color: #4285F4; /* Couleur de fond de Google */
+    color: #fff; /* Texte en blanc */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Styles pour le pop-up de connexion */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Styles pour le reste de votre page */
+/* ... */
+
+
+/* Styles pour le corps de la page */
+body {
+  background-image: url('fond.png'); /* Image de fond */
+  background-repeat: no-repeat;
+  background-position: center center; /* Placer l'image au centre */
+  background-size: cover; /* Ajuster la taille de l'image pour couvrir toute la page */
+  margin: 0; /* Supprimer les marges par défaut du corps */
+  padding: 0; /* Supprimer le rembourrage par défaut du corps */
+  width: 100vw; /* Largeur de la page égale à la largeur de la fenêtre du navigateur */
+  height: 100vh; /* Hauteur de la page égale à la hauteur de la fenêtre du navigateur */
+}
+.texte-haut-gauche {
+  position: absolute;
+  left: 3%; /* Ajustez cette valeur pour la position horizontale souhaitée */
+  top: 4.5%; /* Ajustez cette valeur pour la position verticale souhaitée */
+  color: white ; /* Couleur du texte (noir dans cet exemple) */
+  font-size: 8vw; /* Taille de police du texte */
+  z-index: 2; /* Une valeur de z-index supérieure à celle du bandeau */
+  font-family: 'Arial', Russo_One;
+  /* Autres styles si nécessaire */
+}
+
+/* Styles pour la barre de recherche */
+.barre_recherche {
+  background-color: #ffffff; /* Couleur de fond blanche */
+  border-radius: 45px; /* Bords arrondis */
+  position: absolute;
+  left: 50%; /* Centrer horizontalement par rapport à la largeur du parent */
+  top: 30%; /* 30% de la hauteur de la page */
+  transform: translateX(-50%); /* Centrer par rapport au centre du parent */
+  width: 60%; /* Largeur de la barre de recherche (80% de la largeur du parent) */
+  height: 90px; /* Hauteur de la barre de recherche */
+  z-index: 1; /* Élévation au-dessus du fond */
+  display: flex;
+  align-items: center;
+  padding: 0 30px; /* Espacement interne pour le texte */
+}
+
+/* Augmenter la hauteur de la zone de texte */
+.barre_recherche input[type="text"] {
+  height: 100%; /* Hauteur de la zone de texte */
+  font-size: 2vw; /* Taille du texte dans la zone de texte */
+  background-color: transparent; /* Fond transparent */
+  border: none; /* Supprimer la bordure du champ de texte */
+  outline: none;
+}
+
+
+
+/* Styles pour l'icône de la loupe */
+.barre_recherche .loupe {
+  background-image: url('loupe.png');
+  position: absolute;
+  right: 40px; /* Décalage à droite de la barre de recherche */
+  top: 50%; /* Centrer verticalement par rapport à la hauteur de la barre de recherche */
+  transform: translateY(-50%); 
+  background-color: transparent; /* Fond transparent */
+  background-repeat: no-repeat;
+  width: 41px; /* Largeur de l'icône de la loupe */
+  height: 55px; /* Hauteur de l'icône de la loupe */
+  cursor: pointer; /* Curseur pointeur pour indiquer que l'icône est cliquable */
+}
+
+/* Styles pour le bandeau supérieur */
+.bandeau_superieur {
+  background-color: #000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 20%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Répartit l'espace pour atteindre les bords */
+  padding: 0 20px; /* Espacement des bords */
+  /* Autres styles si nécessaire */
+}
+/* Styles pour le "plus" */
+.plus {
+  background-image: url('plus.png');
+  background-color: transparent; /* Fond transparent */
+  background-repeat: no-repeat;
+  background-size: auto; /* Conserver le ratio de l'image sans ajuster */
+  position: absolute;
+  left: 90%; /* Centrer horizontalement par rapport à la largeur du parent */
+  top: 10%; /* Centrer verticalement par rapport à la hauteur de la page */
+  transform: translate(-50%, -50%); /* Centrer par rapport au centre du parent */
+  width: 84px; /* Largeur de l'image du "plus" */
+  height: 84px; /* Hauteur de l'image du "plus" */
+  z-index: 2; /* Élévation au-dessus du bandeau */
+  cursor: pointer; /* Curseur pointeur pour indiquer que l'icône est cliquable */
+}
+
+/* Styles pour le groupe de fiches */
+.fiches-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40%;
+  width: 100%; /* Prend la largeur complète du parent */
+  /* Autres styles si nécessaire */
+}
+
+/* Styles pour chaque fiche */
+.fiche {
+  width: 25%;
+  background-color: #808080;
+  border-radius: 26px;
+  -moz-border-radius: 26px;
+  -webkit-border-radius: 26px;
+  flex: 1;
+  height: 25%px;
+  margin: 2%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  font-size: 18px;
+  /* Autres styles si nécessaire */
+}
+/* Style pour le pop-up (initiallement invisible) */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour l'arrière-plan */
+    z-index: 999; /* Élévation au-dessus de tous les autres éléments */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style pour le contenu du pop-up */
+.popup-content {
+    background: #fff; /* Couleur de fond du pop-up */
+    border-radius: 10px;
+    padding: 10%;
+    text-align: center;
+    position: relative;
+    z-index: 1000; /* Élévation pour le contenu du pop-up */
+}
+
+/* ... (styles pour le reste de la page) ... */
